@@ -46,18 +46,10 @@ body {
     color: #86878B;
 }
 
-.features{
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-}
-
 .feature{
-    display: table-cell;
+    display: inline-block;
     text-align: center;
     max-width: 33%;
-
 }
 
 .feature__icon {
