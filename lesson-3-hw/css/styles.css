@@ -1,0 +1,124 @@
+@import "../assets/fonts/fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tabs {
+    padding-top: 50px;
+    border-bottom: 1px solid #C6CBCD;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.tab__item {
+    margin-bottom: -1px;
+    display: inline-block;
+    width: 203px;
+    height: 40px;
+    text-align: center;
+}
+
+.tab__item p {
+    padding-top: 10px;
+}
+
+.tab__item--active {
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #C6CBCD;
+    border-bottom: 1px solid white;
+}
+
+.tab__item p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.tab-content {
+    box-sizing: border-box;
+    height: 501px;
+    width: 1170px;
+    border: 1px solid #C6CBCD;
+    border-top: none;
+}
+
+.tab-description {
+    text-align: left;
+    margin: 50px 0 0 80px;
+    display: inline-block;
+    width: 600px;
+}
+
+.tab-description h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-description p {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-description p:first-of-type {
+    padding-top: 50px;
+}
+
+.tab-description p:last-of-type {
+    padding-top: 30px;
+}
+
+.tab-description button {
+    margin-top: 50px;
+    font-family: 'Open Sans', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    background: #EC7979;
+    color: white;
+    height: 58px;
+    width: 270px;
+}
+
+.tab-image {
+    float: right;
+    display: inline-block;
+    height: 100%;
+    width: 470px;
+}
+
+.tab-image img {
+    overflow: hidden;
+    width: 470px;
+    height: 500px;
+}
+
