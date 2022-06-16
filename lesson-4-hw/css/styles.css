@@ -1,0 +1,130 @@
+@import "../assets/fonts/fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pricing {
+    background-color: #F5F5F5;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.separator {
+    width: 170px;
+    height: 1px;
+    margin: 0 auto;
+    background: #EC7979;
+}
+
+.pricing__header {
+    padding: 70px 0 50px 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing__description {
+    padding: 40px 0 40px 0;
+}
+
+.pricing__description p {
+    color: #86878B;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.price-list{
+    padding: 50px 0 100px 0;
+}
+
+.price-card {
+    display: inline-block;
+    width: 370px;
+}
+
+.price-card--selected {
+    margin: 0 5px 0 5px;
+    box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
+}
+
+.price-card__header {
+    border: 1px solid #F5F5F5;
+    background: #333333;
+}
+
+.price-card__header p {
+    padding: 13px 0 13px 0;
+    color: white;
+    font-family: "Open Sans", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0;
+    text-align: center;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+.price-card__price {
+    border: 1px solid #F5F5F5;
+    background: #333333;
+}
+
+.price-card__price p {
+    padding: 29px 0 29px 0;
+    color: white;
+    font-family: Raleway, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0;
+    text-align: center;
+    font-style: normal;
+}
+
+.price-card__description {
+    border: 1px solid #F5F5F5;
+    background: #333333;
+}
+
+.price-card__description p {
+    padding: 14px 0 14px 0;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.price-card__element {
+    background: #FFFFFF;
+    border: 2px solid #F5F5F5;
+}
+
+.price-card__element p{
+    padding: 14px 0 14px 0;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
