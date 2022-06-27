@@ -11,6 +11,10 @@
     color: inherit;
 }
 
+*:focus {
+    outline: none;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -713,11 +717,11 @@
     justify-content: space-around;
 }
 
-.footer-icons div{
+.footer-icons div {
     padding: 11px;
 }
 
-.footer-text{
+.footer-text {
     margin-bottom: 27px;
     color: #FFFFFF;
     font-family: 'Raleway', serif;
@@ -727,7 +731,4 @@
     line-height: 21px;
 }
 
-*:focus{
-    outline: none;
-}
 
