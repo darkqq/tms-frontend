@@ -476,14 +476,11 @@
 }
 
 .price-card {
-    margin-top: 20px;
+    transition: all 300ms;
+    margin: 5px;
     width: 370px;
 }
 
-.price-card--selected {
-    margin: 0 5px 20px 5px;
-    box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
-}
 
 .price-card__header {
     border: 1px solid #F5F5F5;
@@ -535,6 +532,11 @@
     text-align: center;
 
     color: rgba(255, 255, 255, 0.5);
+}
+
+.price-card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
 }
 
 .price-card__element {
