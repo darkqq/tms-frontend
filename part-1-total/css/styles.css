@@ -74,6 +74,7 @@
 }
 
 .banner-section .container {
+    padding-bottom: 185px;
     display: flex;
     padding-top: 283px;
 }
@@ -131,18 +132,17 @@
     background: transparent;
     border: 2px white solid;
     padding: 15px 79px;
-    margin-bottom: 185px;
 }
 
 .banner-form {
     display: flex;
     justify-content: space-between;
     flex-flow: column;
-    height: 450px; /*REMOVE*/
     width: 470px;
     background: #FFFFFF;
     border-radius: 10px;
     align-items: center;
+    align-self: flex-start;
 }
 
 .banner-form-title {
@@ -575,6 +575,7 @@
 }
 
 .design-banner-section .container {
+    padding-bottom: 50px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -620,7 +621,6 @@
     background: transparent;
     text-decoration: none;
     border: 2px solid white;
-    margin-bottom: 50px;
 }
 
 .contact-us-section {
