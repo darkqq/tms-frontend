@@ -64,7 +64,6 @@
     padding: 0 27px;
 }
 
-
 .banner-section {
     background: url("../assets/img/banner-bg.png") no-repeat center center;
     background-size: cover;
@@ -440,11 +439,6 @@
 .pricing-section {
     padding-bottom: 50px;
     background-color: #F5F5F5;
-}
-
-.container {
-    width: 1170px;
-    margin: 0 auto;
 }
 
 .default-separator-red {
