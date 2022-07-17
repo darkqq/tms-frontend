@@ -101,6 +101,7 @@
     line-height: 25px;
     text-align: center;
     text-transform: capitalize;
+    cursor: pointer;
     outline: none;
     border: none;
     background: #EC7979;

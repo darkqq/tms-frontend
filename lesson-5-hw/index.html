@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../lesson-2-hw/styles/styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>AXIT</title>
+</head>
+<body onload="start()" onkeydown="handleKeyPress(event)">
+<section style="display: flex; justify-content: center; margin-top: 150px">
+
+    <canvas id="field" height="600px" width="800px" style="background: black"></canvas>
+
+</section>
+
+<script>
+
+    const canvas = document.getElementById("field");
+    const context = canvas.getContext("2d");
+
+    const step = 50;
+
+    const KEY_UP = 87;
+    const KEY_DOWN = 83;
+    const KEY_RIGHT = 68;
+    const KEY_LEFT = 65;
+
+    class Tuple {
+        x;
+        y;
+
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    let block = {
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 50
+    }
+
+    class Item {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        height = 25;
+        width = 25;
+        x;
+        y;
+
+    }
+
+    let items = [new Item(400, 400), new Item(500, 500)]
+
+    function start() {
+        printBlock();
+    }
+
+    function handleKeyPress(event) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        switch (event.keyCode) {
+            case KEY_UP:
+                moveUp();
+                checkPos();
+                break;
+            case KEY_DOWN:
+                moveDown();
+                checkPos();
+                break;
+            case KEY_LEFT:
+                moveLeft();
+                checkPos();
+                break;
+            case KEY_RIGHT:
+                moveRight();
+                checkPos();
+                break;
+            default:
+                printBlock();
+        }
+    }
+
+
+    function printBlock() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = "#FF0000";
+        context.fillRect(block.x, block.y, block.height, block.width);
+        printItems();
+    }
+
+    function checkPos() {
+        for (let item of items) {
+            let block_tl = new Tuple(item.x, item.y);
+            let block_tr = new Tuple(item.x + item.width, item.y);
+            let block_bl = new Tuple(item.x, item.y + item.height);
+            let block_br = new Tuple(item.x + item.width, item.y + item.height);
+            if (isInArea(block_bl, block) || isInArea(block_br, block) || isInArea(block_tl, block) || isInArea(block_tr, block)) {
+                eatItem(item);
+            }
+        }
+        printBlock();
+    }
+
+    function eatItem(item) {
+        block.height = block.height + 10;
+        block.width = block.width + 10;
+        items = items.filter((e) => e !== item);
+        printBlock();
+        addItem();
+    }
+
+
+    function addItem() {
+        items.push(genItem())
+    }
+
+    function genItem() {
+        let tuple = getTuple();
+        return new Item(tuple.x, tuple.y);
+    }
+
+    function getTuple() {
+        let random_x = Math.floor(Math.random() * canvas.width);
+        let random_y = Math.floor(Math.random() * canvas.height);
+        if (random_x <= 50) {
+            random_x = random_x + 50;
+        }
+        if (random_y <= 50) {
+            random_y += 50;
+        }
+        if (random_y >= canvas.height - 50) {
+            random_y -= 50;
+        }
+        if (random_x >= canvas.width - 50) {
+            random_x -= 50;
+        }
+        return new Tuple(random_x, random_y);
+    }
+
+    function isInArea(point, item) {
+        let item_tl = new Tuple(item.x, item.y);
+        let item_tr = new Tuple(item.x + item.width, item.y);
+        let item_bl = new Tuple(item.x, item.y + item.height);
+
+        return (point.x >= item_tl.x && point.x <= item_tr.x && point.y >= item_tl.y && point.y <= item_bl.y)
+    }
+
+
+    function printItems() {
+        context.fillStyle = "#00FF00";
+        for (let item of items) {
+            context.fillRect(item.x, item.y, item.height, item.width);
+        }
+    }
+
+    function moveDown() {
+        if (block.y + step + block.height <= 600) {
+            block.y += step;
+        }
+    }
+
+
+    function moveUp() {
+        if (block.y - step >= 0) {
+            block.y -= step;
+        }
+    }
+
+    function moveRight() {
+        if (block.x + step + block.height <= 800) {
+            block.x += step;
+        }
+    }
+
+    function moveLeft() {
+        if (block.x - step >= 0) {
+            block.x -= step;
+        }
+    }
+
+
+</script>
+</body>
+
+</html>

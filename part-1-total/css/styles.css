@@ -22,6 +22,8 @@
 }
 
 .header {
+    position: absolute;
+    width: 100%;
     min-height: 75px;
     background: #000000;
     align-items: center;
@@ -382,7 +384,7 @@
     border: none;
 }
 
-.about-description {
+.default-description {
     margin-top: 40px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -534,7 +536,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.price-card:hover{
+.price-card:hover {
     transform: translateY(-20px);
     box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
 }
@@ -638,14 +640,16 @@
 .contact-us__form {
     display: flex;
     justify-content: space-between;
-    flex-flow: column;
     align-items: center;
+    flex-flow: column;
+    flex-direction: column;
 }
 
 .contact-us__form-main {
     display: flex;
     justify-content: space-between;
 }
+
 
 .contact-us__form-main div:first-child {
     margin-right: 30px;
@@ -655,7 +659,7 @@
     width: 571px;
 }
 
-.contact-us__form__input {
+.form-field {
     font-family: 'Open Sans', serif;
     font-style: normal;
     font-weight: 400;
@@ -725,6 +729,48 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+}
+
+.reviews-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.review-box {
+    width: 370px;
+    height: 180px;
+    border-radius: 10px;
+    background: #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-box p {
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #86878B;
+}
+
+.review-box:after {
+    content: " ";
+    position: relative;
+    display: inline-block;
+    top: 100%;
+    left: 15%;
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1.33rem solid #E2E2E2;
 }
 
 
