@@ -15,9 +15,20 @@
     outline: none;
 }
 
+.features-section {
+    background: url("../assets/img/banner-bg.png") no-repeat center center, rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.features-section .container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 @media screen and (min-width: 1200px) {
-
     .container {
         width: 100%;
         max-width: 1200px;
@@ -32,29 +43,171 @@
         min-height: 75px;
     }
 
-    .header .container{
-        flex-flow: row;
+    .header .container {
         justify-content: space-between;
         align-items: center;
         display: flex;
     }
 
     .header-logo {
-        align-self: flex-start;
+        /*Marker*/
     }
 
-    .navbar{
-        align-self: flex-end;
+    .navbar {
+        /*Marker*/
     }
 
-    .nav-menu{
+    .nav-menu {
         display: flex;
         list-style: none;
+        font-family: 'Open Sans', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
     }
 
-    .nav-menu__item{
+    .nav-menu__item {
+        cursor: pointer;
+        padding: 10px 30px;
         color: #f8efef;
     }
+
+    .nav-menu__item a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .features-section .container {
+        padding-top: 283px;
+        padding-bottom: 294px;
+    }
+
+
+
+    .features-description {
+        width: 57%;
+    }
+
+    .features-description__logo{
+        margin: 20px 0;
+    }
+
+    .features-form {
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        background: #FFFFFF;
+        border-radius: 10px;
+        width: 38%;
+        max-height: 450px;
+    }
+
+    .features-form__title {
+        font-family: 'Open Sans', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        text-transform: uppercase;
+        padding: 34px 0;
+    }
+
+    .features-form__title span {
+        color: #EC7979;
+    }
+
+    .features-form__input-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .features-form__input input {
+        padding-bottom: 19px;
+        min-width: 370px;
+        font-family: 'Open Sans', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        border: none;
+        border-bottom: 1px solid #BDBDBD;
+    }
+
+    .features-form__input:first-child {
+        margin-top: 45px;
+    }
+
+    .features-form__input:nth-child(n+1) {
+        margin-top: 33px;
+    }
+
+    .features-form__button {
+        font-family: 'Open Sans', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #FFFFFF;
+        line-height: 20px;
+        margin-top: 75px;
+        padding: 20px 0;
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        background: #EC7979;
+    }
+
+    .features-description__button:hover{
+        transform: scale(1.05);
+        color: #EC7979;
+        border-color: #EC7979;
+    }
+
+
+    .features-description__title {
+        margin-top: 70px;
+        font-family: 'Raleway', serif;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .features-description__message {
+        max-width: 270px;
+        margin-top: 100px;
+        font-family: 'Raleway', serif;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .features-description__button {
+        cursor: pointer;
+        background: transparent;
+        margin-top: 42px;
+        font-family: 'Open Sans', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+        padding: 19px 100px;
+        transition: all 300ms;
+    }
+
+
+
 
 
 }
