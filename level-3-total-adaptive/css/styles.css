@@ -17,6 +17,11 @@
     outline: none;
 }
 
+
+.contact-us-section{
+    padding: 50px 0;
+}
+
 .main-banner-section {
     background: url("../assets/img/banner-bg.png") no-repeat center center, rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
@@ -1687,7 +1692,7 @@
 
     header {
         background: black;
-        height: 56px;
+        height: 75px;
         display: flex;
         align-items: center;
     }
@@ -1713,7 +1718,7 @@
     }
 
     nav .menu a {
-        padding: 10px 20px;
+        padding: 10px 27px;
         font-family: 'Open Sans', serif;
         font-style: normal;
         font-weight: 600;
